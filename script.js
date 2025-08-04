@@ -6,15 +6,15 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Você está ao lado de uma linha de um bonde com uma alavanca, se você a puxar, o bonde irá trocar de trajetório. No trilho em que o bonde está indo, está o seu melhor amigo amarrado. No segundo trilho, está 5 pessoas desconhecidas amarradas. O que você faz?",
+        enunciado: "Você está ao lado de uma linha de um bonde com uma alavanca, se você a puxar, o bonde irá trocar de trajetório. No trilho em que o bonde está indo, está 5 desconhecidos presos no trilho. No segundo trilho, está o seu melhor amigo também preso no trilho. O que você faz?",
         alternativas: [
             {
-                texto: "Puxa a alavanca, salvando seu melhor amigo.",
-                afirmacao: "...você preferiu sacrificar 5 desconhecidos para salvar seu amigo, "
+                texto: "Puxa a alavanca, salvando as 5 pessoas desconhecidas.",
+                afirmacao: "...preferiu sacrificar o seu melhor amigo para salvar 5 desconhecidos, "
             },
             {
-                texto: "Não faz nada, salvando as 5 pessoas desconhecidas.",
-                afirmacao: "...você prefiriu sacrificar seu melhor amigo para salvar 5 pessoas que você não conhece, "
+                texto: "Não faz nada, salvando o seu melhor amigo.",
+                afirmacao: "...preferiu sacrificar 5 desconhecidos para salvar o seu melhor amigo, "
             }
         ]
     },
@@ -22,7 +22,7 @@ const perguntas = [
         enunciado: "Na mesma situação. Você encontra uma família no trilho do bonde, e no outro trilho, uma familia de cachorros. O que você faz?",
         alternativas: [
             {
-                texto: "Puxa a alavanca, salvando a família.",
+                texto: "Puxa a alavanca, salvando a família humana.",
                 afirmacao: "preferiu salvar humanos sobre animais, "
             },
             {
@@ -36,11 +36,24 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Puxa a alavanca, salvando o gato.",
-                afirmacao: "preferiu salvar 1 animal doméstico sobre 5 milhões animais marinhos, "
+                afirmacao: "preferiu salvar 1 animal doméstico sobre vários animais marinhos, "
             },
             {
                 texto: "Não faz nada, salvando os camarões.",
-                afirmacao: "preferiu salvar 5 milhões animais marinhos sobre 1 animal doméstico, "
+                afirmacao: "preferiu salvar vários animais marinhos sobre 1 animal doméstico, "
+            }
+        ]
+    },
+    {
+        enunciado: "No primeiro trilho está 5 pessoas desconhecidas, e no segundo trilho está um milionário, que diz que irá te pagar R$100.000 para não puxar a alavanca. O que você faz?",
+        alternativas: [
+            {
+                texto: "Puxa a alavanca, salvando as 5 pessoas e recusando a oferta.",
+                afirmacao: "ignorou um suborno,"
+            },
+            {
+                texto: "Não faz nada, salvando o milionário.",
+                afirmacao: "aceitou um suborno para matar 5 pessoas,"
             }
         ]
     },
@@ -48,25 +61,12 @@ const perguntas = [
         enunciado: "Nos primeiro trilho, você observa um bebê, que no futuro irá crescer para ser um cientista e irá criar a cura para o câncer, e no outro trilho, outro bebê que irá crescer um presidente que criará várias guerras mundiais. Mas uma multidão está olhando para você, e não sabem o futuro dos bebês. O que você faz?",
         alternativas: [
             {
-                texto: "Puxa a alavanca, salvando o mundo do câncer, mas sendo visto como um assassino.",
-                afirmacao: "afirmação"
+                texto: "Puxa a alavanca, salvando o mundo do câncer, mas sendo visto como um assassino..",
+                afirmacao: "sacrificou a própria imagem para salvar o mundo."
             },
             {
-                texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
-                afirmacao: "afirmação"
-            }
-        ]
-    },
-    {
-        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda da IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz? ",
-        alternativas: [
-            {
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-                afirmacao: "afirmação"
-            },
-            {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-                afirmacao: "afirmação"
+                texto: "Não faz nada, salvando o futuro ditador.",
+                afirmacao: "priorizou a própria imagem sobre salvar o mundo."
             }
         ]
     },
@@ -105,7 +105,7 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "No problema do Bonde...";
+    caixaPerguntas.textContent = "No problema do Bonde, você...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }

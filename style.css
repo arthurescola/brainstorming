@@ -14,10 +14,12 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .caixa-principal{
   background-color: var(--cor-principal);
+  outline: 2px solid var(--cor-secundaria);
   width: 90%;
   max-width: 600px;
   text-align: center;
@@ -25,6 +27,29 @@ body {
   border-radius: 20px;
 }
 
+button {
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 5px;
+  transition: background-color 0.3s;
+  outline: 2px solid var(--cor-secundaria)
+}
+
+button:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-fundo);
+}
+
+.imagem {
+  border-radius: 20px;
+  outline: 2px solid var(--cor-secundaria);
+}
+
 h1{
   color: var(--cor-destaque);
+}
+
+ul {
+  text-align: center
 }
